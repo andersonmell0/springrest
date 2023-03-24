@@ -7,6 +7,9 @@ import javax.persistence.Id;
 
 import org.springframework.security.core.GrantedAuthority;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Role implements GrantedAuthority {
 
@@ -17,7 +20,7 @@ public class Role implements GrantedAuthority {
 	private Long id;
 
 	private String name;
-	
+
 	@Override
 	public String getAuthority() {
 		return name;

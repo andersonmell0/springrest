@@ -38,11 +38,11 @@ public class User implements UserDetails{
 	private Boolean ativo;
 
 	private String token;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	@Fetch(FetchMode.JOIN)
 	private List<Role> roles;
-	
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return roles;

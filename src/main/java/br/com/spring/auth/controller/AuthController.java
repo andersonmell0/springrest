@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.spring.auth.config.JwtRequest;
+import br.com.spring.auth.service.UserService;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

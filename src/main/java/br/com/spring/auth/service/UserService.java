@@ -51,9 +51,7 @@ public class UserService implements UserDetailsService{
 
 		try {
 			authenticate(authenticationRequest.getUsername(), authenticationRequest.getSenha());
-
 			final User userDetails = repository.findByUsername(authenticationRequest.getUsername());
-
 			final String token = jwtTokenUtil.generateToken(userDetails);
 
 			return ResponseEntity.ok(token);
